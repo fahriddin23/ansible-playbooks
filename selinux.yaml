@@ -1,0 +1,9 @@
+---
+- name: selinux
+  hosts: app1
+  become: true
+  tasks:
+    - name: disable SELinux
+      selinux:
+        policy: targeted
+        state: disabled
